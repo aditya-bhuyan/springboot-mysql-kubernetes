@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mysql-app
+  name: mysql-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mysql-app
+    spec:
+      containers:
+      - image: adityapratapbhuyan/mysqlapp:no-port
+        name: mysqlapp
