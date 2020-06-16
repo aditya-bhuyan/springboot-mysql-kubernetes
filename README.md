@@ -24,7 +24,7 @@ This application is showcases the following
 - Open the application.properties and ensure that **For Testing locally** section is commented and **For Deployment in Kubernetes** section is uncommented
 - Execute "gradlew clean build -x test"
 - **Dockerfile** is already available for docker build
-- Execute "docker build -t <your-docker-user-name>/mysql-app:v1 ."
+- Execute "docker build -t [your-docker-user-name]/mysql-app:v1 ."
 - Ensure that the image got created by executing "docker images"
 - Push the image to docker hub by executing "docker push <your-docker-user-name>/mysql-app:v1"
 
@@ -41,7 +41,7 @@ This application is showcases the following
  All these would ensure that Persistent Volume, MySQL deployment are created. The MySQL deployment is also exposed as a service called **mysql** which we are referring in our SPRING_DATASOURCE_URL section without any port
  
  - To access the mysql service execute the command mentioned in the **mysql-client.txt**  file under deployments folder
- - To deploy the application first open the mysql-app-deployment.yaml and replace **adityapratapbhuyan/mysqlapp:no-port** with **docker push <your-docker-user-name>/mysql-app:v1**
+ - To deploy the application first open the mysql-app-deployment.yaml and replace **adityapratapbhuyan/mysqlapp:no-port** with **docker push [your-docker-user-name]/mysql-app:v1**
  - Execute  "kubectl apply -f deployments/mysql-app-deployment.yaml". It would take around 2-3 minutes for the first time to download the image and deploy. Ensure the image started successfully by executing "kubectl get deploy"
  - Once the Deployment for the app is running, execute the below command to expose the deployment as a service
  **kubectl -f deployments/mysql-app-service.yaml**
