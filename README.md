@@ -26,7 +26,7 @@ This application is showcases the following
 - **Dockerfile** is already available for docker build
 - Execute "docker build -t [your-docker-user-name]/mysql-app:v1 ."
 - Ensure that the image got created by executing "docker images"
-- Push the image to docker hub by executing "docker push <your-docker-user-name>/mysql-app:v1"
+- Push the image to docker hub by executing "docker push [your-docker-user-name]/mysql-app:v1"
 
 ## Deploying in Kubernetes
 - Use any Kubernetes deployment. My choice is **Minikube**
